@@ -1,0 +1,117 @@
+@import "../../index.scss";
+
+@mixin details-style {
+  @include flex-center;
+  font-size: $details-font-size;
+  font-weight: $details-font-weight;
+  gap: $flex-gap;
+  color: $cyan;
+}
+
+@mixin cyan-hover {
+  cursor: pointer;
+  color: $cyan;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: $card-width;
+  height: $card-height;
+  row-gap: $card-row-gap;
+  padding: $card-padding;
+  border-radius: $card-border-radius;
+  background-color: $card-bg-color;
+  // box shadow black bottom
+  box-shadow: 0px 0px 100px 10px rgba(0, 0, 0, 0.75);
+
+  &__img {
+    align-self: center;
+    width: $card-img-width;
+    height: $card-img-height;
+    opacity: 1;
+
+    &:hover {
+      &:before {
+        position: absolute;
+        content: url(../../assets/images/icon-view.svg);
+        background-color: $cyan;
+        @include flex-center;
+        @include cyan-hover;
+        width: $card-img-width;
+        height: $card-img-height;
+        border-radius: $card-border-radius;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__title {
+    font-size: $title-font-size;
+    font-weight: $title-font-weight;
+    :hover {
+      @include cyan-hover;
+    }
+  }
+
+  &__description {
+    font-size: $description-font-size;
+    font-weight: $description-font-weight;
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-price {
+      @include details-style;
+      &-logo {
+        width: $svg-eth-width;
+        height: $svg-eth-height;
+      }
+    }
+
+    &-time {
+      @include details-style;
+      &-logo {
+        width: $svg-clock-width;
+        height: $svg-clock-height;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    height: 100%;
+    padding: 15px 5px;
+    border-top: 1px solid $line-color;
+    font-size: 0.9rem;
+
+    &-author {
+      @include flex-center;
+      &-avatar {
+        width: $avatar-width;
+        height: $avatar-height;
+        margin-right: 20px;
+        border: 1px solid $white;
+        border-radius: 50%;
+      }
+
+      &-name {
+        @include flex-center;
+        gap: $flex-gap;
+        &-author {
+          font-size: $details-font-size;
+          font-weight: $details-font-weight;
+          a {
+            text-decoration: none;
+          }
+          :hover {
+            @include cyan-hover;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+// ## Layout
+$mobile-width: 375px;
+$desktop-width: 1440px;
+// ## Colors
+// ### Primary
+$soft-blue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+// ### Neutral
+$main-bg-color: hsl(217, 54%, 11%);
+$card-bg-color: hsl(216, 50%, 16%);
+$line-color: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
+// ## Card
+// ### Sizes
+$card-width: 355px;
+$card-height: 580px;
+// ### Spacing
+$flex-gap: 5px;
+$card-row-gap: 1.5rem;
+$card-padding: 1.5rem;
+// ## Border
+$card-border-radius: 15px;
+// ### Card img
+$card-img-width: 300px;
+$card-img-height: 300px;
+// ## Typography
+$Outfit-font: "Outfit", sans-serif;
+// ### Paragraph
+$paragraph-font-size: 16px;
+$paragraph-font-weight: 300;
+// ### Title
+$title-font-size: 20px;
+$title-font-weight: 600;
+// ### Description
+$description-font-size: 18px;
+$description-font-weight: 400;
+// ## Details
+$details-font-size: 16px;
+$details-font-weight: 600;
+// ## Avatar
+$avatar-width: 30px;
+$avatar-height: 30px;
+// ## SVG sizes
+$svg-clock-width: 20px;
+$svg-clock-height: 20px;
+$svg-eth-width: 10px;
+$svg-eth-height: 20px;

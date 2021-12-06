@@ -1,0 +1,32 @@
+@import "./index.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $white;
+  font-family: $Outfit-font;
+}
+
+html {
+  background-color: $main-bg-color;
+}
+
+span {
+  color: $soft-blue;
+  font-family: $Outfit-font;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  @include flex-center;
+  flex-direction: column;
+  background-color: $main-bg-color;
+
+  &__cards {
+    @include flex-center;
+    flex-flow: row wrap;
+    gap: 1.5rem;
+  }
+}
